@@ -1,0 +1,39 @@
+<!-- <div *ngIf="product" class="card mb-15" style="max-width: 740px; max-height: 740px;"> -->
+  <!-- ... resto del contenido de la tarjeta ... -->
+
+<div class="card mb-15" style="max-width: 740px; max-height: 740px;" id="card" >
+  <div class="row g-0">
+
+    <div class="col-md-6">
+    <img class="img-fluid rounded-start" src="assets/imagenes/{{product.photo}}"  style="width:100%;max-width:330px;"  id="imagen">
+    </div>
+
+    <div class="col-md-6">
+      <div class="card-body">
+
+    <small><b>Nombre: </b></small>
+    <small>{{product.name}}</small><br>
+    <small><b>Valor: </b></small>
+    <small> $ {{product.price}}</small><br>
+    <small><b>Marca:  </b></small>
+    <small>{{product.brand}}</small><br>
+    <small><b>Modelo: </b></small>
+    <small>{{product.model}}</small><br>
+    <small><b>Descripción:  </b></small>
+    <small>{{product.description}}</small><br>
+    <small><b>Codígo:  </b></small>
+    <small>{{product.code}}</small><br>
+    <small><b>Stock: </b></small>
+    <small>{{product.stock}}</small><br>
+    <small><b>Fecha de Registro:  </b></small>
+    <small>{{product.dateRegistry}}</small><br>
+
+
+    <div>
+      <button type="submit" class="btn btn-dark" [routerLink]="['edit']" >Editar</button>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->

@@ -1,0 +1,151 @@
+<div *ngIf="product!== undefined">
+  <h1>
+    {{product.id.value ? 'Editar': 'Agregar'}}
+    Producto
+    <small>{{product.name.value}}</small>
+  </h1>
+</div>
+
+<form class="grid" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <input type="hidden" formControlName="id">
+
+<div class="mb-3">
+  <label formControlName="product.name.value" class="form-label">Nombre</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label formControlName="product.price.value" class="form-label">Precio</label>
+  <input type="number" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label formControlName="product.price.brand" class="form-label">Marca</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label formControlName="product.model.value" class="form-label">Modelo</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label formControlName="product.code.value" class="form-label">Código</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label formControlName="product.description.value" class="form-label">Descripción</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label formControlName="product.dateRegistry.value" class="form-label">Fecha de Registro</label>
+  <input type="date" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label formControlName="product.stock.value" class="form-label">Stock</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1">
+</div>
+<div>
+
+  <button class="btn btn-danger" (click)="onSubmit()">Agregar</button>
+  <button class="btn btn-primary" (click)="deleteProduct()">Borrar</button>
+
+  <span></span>
+
+
+</div>
+
+
+</form>
+
+<!-- <div class="grid">
+  <div class="col-12 sm:col-6">
+
+    <div class="card">
+      <form class="grid" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+        <input type="hidden" formControlName="id">
+
+        <form class="col-12 sm:col-6">
+          <label>Nombre</label>
+          <input matInput type="text" formControlName="name"/>
+        </form>
+
+        <form class="col-12 sm:col-6">
+          <label>Cedula</label>
+          <input matInput type="text"
+          required
+          formControlName="identification">
+        </form>
+
+        <form class="col-12">
+          <label>Salario</label>
+          <input matInput type="text"
+          required
+          formControlName="salary">
+        </form>
+
+        <form class="col-12">
+          <label>Tipo de Contrato</label>
+          <input matInput type="text"
+          required
+          formControlName="contractType">
+        </form>
+
+        <form class="col-12">
+          <label>Fecha Inicio de Contrato</label>
+          <input matInput type="text"
+          required
+          formControlName="contractStartDate">
+        </form>
+
+        <form class="col-12">
+          <label>Fecha Finalización de Contrato</label>
+          <input matInput type="text"
+          required
+          formControlName="contractEndDate">
+        </form>
+
+        <form class="col-12">
+          <label>Cargo</label>
+          <input matInput type="text"
+          required
+          formControlName="role">
+        </form>
+
+        <form class="col-12">
+          <label>Area</label>
+          <input matInput type="text"
+          required
+          formControlName="area">
+        </form>
+
+        <form class="col-12">
+          <label>Foto</label>
+          <input matInput type="text"
+          required
+          formControlName="photo">
+        </form>
+      </form>
+
+      <div class="flex justify-content-between">
+
+        <button mat-flat-button color="warn" (click)="deleteProduct()">Borrar</button>
+
+        <span></span>
+
+        <button mat-flat-button color="primary" (click)="onSubmit()">
+
+          Guardar
+        </button>
+
+      </div>
+
+  </div>
+    </div>
+
+  </div> -->
+

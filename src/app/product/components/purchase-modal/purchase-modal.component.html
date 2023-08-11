@@ -1,0 +1,9 @@
+<!-- purchase-modal.component.html -->
+<h2>Your Cart</h2>
+<div *ngFor="let item of cartItems" >
+
+  <p><img class="img-fluid rounded-start" src="assets/imagenes/{{item.photo.value}}" style="width:20%;max-width:50px;"  id="imagen"> {{ item.name.value }} - ${{ item.price.value }} </p>
+</div>
+<p>Total: ${{ calculateTotal() }}</p>
+<button (click)="purchase()">Comprar</button>
+
